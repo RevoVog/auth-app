@@ -1,4 +1,11 @@
+"use client"
+
+import {signOut} from "next-auth/react";
+import {useRouter} from "next/router";
 export default function UserInfo() { 
+
+
+
     return (
         <div className="grid place-items-center h-screen">
         <div className="shadow-md p-10 bg-white rounded-lg border-t-8 border-green-400">
@@ -10,7 +17,7 @@ export default function UserInfo() {
                 Email : <span className="text-green-500">Jone@gmail.com</span>
             </div>
             <div>
-            <button type="submit" className="bg-red-400 text-white p-2 mt-6 w-full rounded-lg hover:bg-red-500">Log Out</button>
+            <button onClick={signOut} type="submit" className="bg-red-400 text-white p-2 mt-6 w-full rounded-lg hover:bg-red-500">Log Out</button>
             </div>
         </div>
         </div>
